@@ -1,8 +1,8 @@
 import axios from "axios";
 
 // Export an object containing methods we'll use for accessing the Dog.Ceo API
-
-export default {
+// eslint-disable-next-line import/no-anonymous-default-export
+const API = {
   getRandomDog: function() {
     return axios.get("https://dog.ceo/api/breeds/image/random");
   },
@@ -13,3 +13,5 @@ export default {
     return axios.get("https://dog.ceo/api/breeds/list");
   }
 };
+
+export default API
